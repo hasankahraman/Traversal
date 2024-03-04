@@ -3,3 +3,36 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_UILayout.cshtml";
 }
+
+@await Component.InvokeAsync("_SliderVC")
+
+
+@await Component.InvokeAsync("_PopularDestinationsVC")
+
+
+@await Component.InvokeAsync("_StatisticsVC")
+
+
+<!-- //stats -->
+<!--/-->
+<div class="best-rooms py-5">
+    <div class="container py-md-5">
+        <div class="ban-content-inf row">
+            <div class="maghny-gd-1 col-lg-6">
+                @await Component.InvokeAsync("_Featured1VC")
+            </div>
+            <div class="maghny-gd-1 col-lg-6 mt-lg-0 mt-4">
+                <div class="row">
+                    @await Component.InvokeAsync("_Featured2VC")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //stats -->
+<!--/w3l-bottom-->
+@await Component.InvokeAsync("_SubAboutVC")
+<!--//w3l-bottom-->
+<!-- testimonials -->
+@await Component.InvokeAsync("_TestimonialVC")
+<!-- //testimonials -->                
